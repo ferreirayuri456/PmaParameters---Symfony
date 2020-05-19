@@ -1,0 +1,33 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+adicionar_parameters:
+  path: /pma
+  controller: App\Controller\PmaParametersController::store
+  methods:
+    -POST
+
+buscar_parameters:
+  path: /pma
+  controller: App\Controller\PmaParametersController::pegaTodos
+  methods:
+    -GET
+
+busca_um_parameter:
+  path: /pma/{id}
+  controller: App\Controller\PmaParametersController::pegaTodasOuAlgumas
+  methods:
+    -GET
+
+remove_parameters:
+  path: /pma/{id}
+  controller: App\Controller\PmaParametersController::remove
+  methods:
+    -DELETE
+
+atualiza_parameters:
+  path: /pma/{id}
+  controller: App\Controller\PmaParametersController::atualiza
+  methods:
+    -PUT
